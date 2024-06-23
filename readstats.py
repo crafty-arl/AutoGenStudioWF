@@ -288,26 +288,4 @@ if st.button('Analyze Readability'):
     else:
         st.warning("Please enter some text to analyze.")
 
-# Instructions for migrating and deploying the app
-st.sidebar.title("Deployment Instructions")
-st.sidebar.markdown("""
-### To migrate this app to GitHub and deploy on Streamlit:
-1. **Clone the repository or create a new one:**
-    - Create a new repository on GitHub.
-    - Clone the repository to your local machine.
-    - Add your project files to the repository.
 
-2. **Push the code to GitHub:**
-    ```bash
-    git add .
-    git commit -m "Initial commit"
-    git push origin main
-    ```
-
-3. **Deploy on Streamlit:**
-    - Go to [Streamlit Sharing](https://share.streamlit.io/).
-    - Click on "New app".
-    - Connect your GitHub account and select the repository.
-    - Choose the branch and the main Python file (e.g., `readstats.py`).
-    - Click "Deploy!".
-""")
