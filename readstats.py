@@ -4,7 +4,6 @@ import streamlit as st
 import textstat
 import plotly.express as px
 from crewai import Agent, Task, Crew, Process
-from crewai_tools import SerperDevTool
 
 def load_env_variable(var_name):
     value = os.getenv(var_name)
@@ -287,5 +286,3 @@ if st.button('Analyze Readability'):
                 st.error(f"An error occurred: {e}")
     else:
         st.warning("Please enter some text to analyze.")
-
-
