@@ -1,5 +1,5 @@
-crewai==0.32.2
-numpy==2.0.0
+crewAI==0.32.2
+numpy>=1.23.2,<2.0.0
 pandas==2.2.2
 plotly==5.22.0
 python-dotenv==1.0.1
