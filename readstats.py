@@ -132,7 +132,7 @@ The readability scores are:
 {analysis_result_str}
 
 Please provide a detailed report in the following format:
-Report Name: Readability Analysis Report
+Report Name: {analysis_topic} Report
 Report Scores:
   - FRE: {flesch_reading_ease} (Explanation: {explanation})
   - SMOG: {smog_index} (Explanation: {explanation})
@@ -165,7 +165,8 @@ Conclusion:
                 linsear_write_formula=linsear_write_formula,
                 gunning_fog_index=gunning_fog_index,
                 text_standard=text_standard,
-                explanation="Explanation placeholder"  # Added placeholder for explanation
+                explanation="Explanation placeholder",  # Added placeholder for explanation
+                analysis_topic="Report name placeholder"
             )
 
             # Create the Readability Analysis Agent with system message
@@ -199,7 +200,7 @@ Conclusion:
             result = crew.kickoff(inputs={'text': input_string})
 
             # Display the result
-            st.header("Crew AI Report")
+            st.header("Readable IQ Report")
             if isinstance(result, str):
                 st.markdown(result.replace("\\n", "\n"))
             else:
