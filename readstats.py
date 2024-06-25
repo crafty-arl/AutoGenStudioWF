@@ -208,12 +208,7 @@ Conclusion:
                 st.write("Unexpected result format:", result)
 
             # Show dialog after the report is generated
-            ui.alert_dialog(
-                title="Readability Report Generated",
-                content="The readability analysis report has been generated successfully.",
-                visible=True,
-                on_close=None
-            )
+            
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
