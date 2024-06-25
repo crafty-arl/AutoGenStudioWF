@@ -36,7 +36,7 @@ st.sidebar.markdown("""
 openai_api_key = st.sidebar.text_input("Enter your OpenAI API Key", type="password")
 
 if openai_api_key:
-    os.environ["OPENAI_API_KEY"] = openai_api_key
+    st.session_state["OPENAI_API_KEY"] = openai_api_key
 
 # Text input using streamlit_shadcn_ui
 user_text = ui.textarea(default_value="Copy / Paste Text You Need to Analyze", placeholder="Enter longer text", key="textarea1")
