@@ -21,6 +21,7 @@ load_dotenv()
 st.set_page_config(page_title='Readable IQ', page_icon='📖')
 st.title('Readable IQ')
 
+
 # Sidebar for OpenAI API key input and instructions
 st.sidebar.title("Configuration")
 st.sidebar.markdown("""
@@ -166,7 +167,7 @@ Conclusion:
                 gunning_fog_index=gunning_fog_index,
                 text_standard=text_standard,
                 explanation="Explanation placeholder",  # Added placeholder for explanation
-                analysis_topic="Report name placeholder"
+                analysis_topic="Readability Analysis"
             )
 
             # Create the Readability Analysis Agent with system message
@@ -205,6 +206,14 @@ Conclusion:
                 st.markdown(result.replace("\\n", "\n"))
             else:
                 st.write("Unexpected result format:", result)
+
+            # Show dialog after the report is generated
+            ui.alert_dialog(
+                title="Readability Report Generated",
+                content="The readability analysis report has been generated successfully.",
+                visible=True,
+                on_close=None
+            )
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
